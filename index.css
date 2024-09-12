@@ -1,13 +1,34 @@
-.container {
+body {
   /* display: grid;
   grid-template-rows: repeat(3, 1fr) 30%; */
   font-family: "Roboto", sans-serif;
   color: #838783;
+  margin: 0;
 }
 
 button {
   background-color: inherit;
   cursor: pointer;
+}
+
+.heading-bold {
+  font-size: 40px;
+  color: #636061;
+  font-weight: lighter;
+}
+
+.text-line-spacing {
+  line-height: 1.5;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.anchor-button {
+  text-decoration: none;
+  padding: 20px;
+  border: 2px solid;
 }
 
 /* hero & nav section */
@@ -26,8 +47,6 @@ nav > p {
   align-items: center;
   background-color: white;
   color: #50b8e9;
-  /* margin-left: 200px; */
-  cursor: pointer;
   box-shadow: 15px 15px #1da8e2;
   font-size: 40px;
 }
@@ -47,7 +66,6 @@ nav > p {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 20px;
-  cursor: pointer;
 }
 
 .hamburger-bar {
@@ -58,18 +76,16 @@ nav > p {
 }
 
 .hero__download {
-  display: flex;
-  /* why justify-content is not working here */
-  /* justify-content: flex-end; */
-  align-items: flex-end;
-  flex-direction: column;
-  margin-top: 20px;
+  /* display: flex; */
+  /* align-items: flex-end;
+  flex-direction: column; */
+  text-align: end;
   color: white;
   /* height: 100px; */
 }
 
-.hero__download span {
-  font-size: 100px;
+.hero__download h1 {
+  font-size: 80px;
   font-weight: 400;
 }
 
@@ -81,12 +97,12 @@ nav > p {
 .hero__download p {
   font-size: 35px;
   font-weight: lighter;
-  margin-top: -5px;
+  margin-top: -50px;
 }
 
 .hero__download button {
   color: white;
-  border: 1.5px solid white;
+  border: 1.5px solid;
   padding: 10px 10px;
   width: 200px;
   height: 50px;
@@ -97,17 +113,9 @@ nav > p {
   margin-left: 10px;
 }
 
-/* .hero__img {
-  margin-top: -20px;
-  padding-left: 10em;
-  overflow: hidden;
-  height: 200px;
-  width: 150px;
-} */
-
 #iphone-top {
   position: relative;
-  top: 5px;
+  top: -30px;
   margin-left: 100px;
 }
 
@@ -130,41 +138,23 @@ nav > p {
 
 #content-img {
   position: relative;
-  /* right: -30px; */
   bottom: -90px;
-  /* height: 100px; */
-  /* float: right; */
-  /* display: inline-block; */
-  /* text-align: right; */
 }
 
 .header-content p {
-  /* font-weight: 100; */
   font-size: 17px;
   font-weight: 200;
-  /* padding: 10px; */
+  padding: 10px;
 }
 
-/* .header-content img {
-  height: auto;
-  width: 100%;
-} */
-
-.header-content span {
-  font-size: 40px;
-  color: #636061;
-  font-weight: lighter;
-}
-
-.header-content__p {
+#header-content__bold {
   padding-left: 20px;
   border-left: 5px solid #1da8e2;
+  font-weight: 400;
 }
 
 .header-content button {
   border: 1.5px solid;
-  /* height: 50px;
-  width: 50px; */
   padding: 10px;
   font-size: smaller;
   color: #14ab86;
@@ -175,8 +165,7 @@ nav > p {
 }
 
 .header-content button img {
-  height: 28px;
-  width: 28px;
+  height: 20px;
   margin-left: 15px;
   margin-bottom: -5px;
 }
@@ -184,30 +173,24 @@ nav > p {
 /* avail section */
 
 .avail {
-  display: inline-flex;
-  /* height: 300px;
-  position: fixed; */
+  /* display: flex; */
+  /* justify-content: center; */
   overflow: hidden;
-}
-
-.avail span {
-  font-size: 40px;
-  font-weight: lighter;
-  color: #636061;
+  height: 700px;
 }
 
 .avail__div {
-  /* why doesnt padding work here */
-  /* padding: 40px; */
-  position: relative;
-  left: -550px;
-  top: 130px;
+  /* position: relative; */
+  /* left: -550px; */
+  /* top: 40px; */
+  margin: 100px 0px 0px 60%;
+  width: 370px;
 }
 
 .avail__div--dark {
   color: #636061;
-  margin-top: 50px;
-  margin-bottom: 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .avail__div img {
@@ -216,19 +199,19 @@ nav > p {
   padding-left: 15px;
 }
 
-.avail button {
-  padding: 15px;
-  width: 300px;
-  border: 2px solid #d62877;
-  border-bottom: 3px solid #d62877;
+.avail a {
   color: #d62877;
-  margin-top: 30px;
+  display: inline-block;
+  margin-top: 35px;
 }
 
 /* avail section images */
-.avail__img {
-  /* position: relative; */
-  /* white-space: normal; */
+
+.avail__imgs {
+  display: flex;
+  position: relative;
+  top: -420px;
+  pointer-events: none;
 }
 
 #macbook-img {
@@ -289,14 +272,15 @@ nav > p {
   height: 250px;
 }
 
-.contribute p {
-  font-size: 40px;
+.contribute h2 {
+  font-weight: 400;
+  color: white;
   margin-top: 50px;
 }
 
 .contribute button {
   color: inherit;
-  border: solid white;
+  border: solid;
   height: 60px;
   width: 220px;
   font-size: 15px;
@@ -332,7 +316,6 @@ nav > p {
 }
 
 .socials__div img {
-  cursor: pointer;
   height: 60px;
 }
 
@@ -360,7 +343,6 @@ nav > p {
   height: 18px;
   margin-bottom: -3px;
   margin-left: 10px;
-  cursor: pointer;
 }
 
 #seperation-pipe {
@@ -368,13 +350,13 @@ nav > p {
   margin-left: 40px;
 }
 
-.footer {
+footer {
   font-size: x-small;
   text-align: center;
   padding: 20px;
 }
 
-.footer span {
+footer span {
   color: #50b8e9;
 }
 
