@@ -367,13 +367,15 @@ footer span {
 /* page scroll */
 
 #page-scroll {
-  /* position: relative; */
   height: 50px;
   width: 50px;
   text-align: center;
   background-color: whitesmoke;
   border-radius: 8px;
-  margin: -85px 0px 0px 90%;
+
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
 }
 
 .solid-bar {
